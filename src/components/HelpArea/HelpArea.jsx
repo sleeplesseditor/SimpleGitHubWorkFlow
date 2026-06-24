@@ -1,3 +1,4 @@
+import * as React from 'react';
 import HelpBox from '../HelpBox/HelpBox';
 import './HelpArea.css';
 
