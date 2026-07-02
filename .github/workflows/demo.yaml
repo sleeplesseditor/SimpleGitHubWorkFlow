@@ -59,5 +59,12 @@ jobs:
         run: ls
       - name: Output filename
         run: echo "${{ needs.build.outputs.script-file }}"
-      - name: Deploy
-        run: echo "Deploying..."
+      - name: Deploy site
+        uses: ./.github/actions/deploy-s3-javascript
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        with:
+          bucket: ${{ secrets.AWS_BUCKET_NAME }}
+          dist-folder: ./dist
+          region: ${{ secrets.AWS_BUCKET_REGION }}
