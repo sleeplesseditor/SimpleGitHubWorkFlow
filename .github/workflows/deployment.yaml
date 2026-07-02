@@ -37,5 +37,5 @@ jobs:
     steps:
       - name: Get Code
         uses: actions/checkout@v4
-      - name: Run custom action
-        uses: ./.github/actions/deploy-s3-javascript
+      # - name: Run custom action
+      #   uses: ./.github/actions/deploy-s3-javascript
