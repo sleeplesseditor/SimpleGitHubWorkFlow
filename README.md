@@ -14,6 +14,7 @@ A simple example of the use of Github workflows with a basic React app, as part 
 - Adapted some of the workflow yaml files to use slightly different patterns (i.e. text printing)
     - Updated use of v3 actions to v4 where relevant
     - Updated use of Node versions to more contemporary ones (i.e. 24)
+- AWS S3 bucket-related workflow code has been disabled
 
 ## Potential Further Improvements
 - Break out workflows to separate branches
